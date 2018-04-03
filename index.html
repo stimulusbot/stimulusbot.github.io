@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+		<script src="app.js"></script>
+		<script src="triggers.json"></script>>
+	</head>
+	
+
+
+
+
+
+
+
+
+	<body ng-app='app' ng-controller='TriggersController as triggerList' >
+
+
+
+
+
+
+
+		<div class="container" style="margin-top: 100px;">
+			<div class="jumbotron">
+				<form ng-submit="triggerList.addTrigger()" class="form-signin">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="triggerList.logMessage" placeholder="Log Text">
+						<input type="text" class="form-control" ng-model="triggerList.message" placeholder="Message">
+						<input class="btn btn-primary float-right" type="submit" value="Add">
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+
+
+
+
+		<div class="container">
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+	  					<th scope="col"></th>
+	  					<th scope="col">Log Text</th>
+	  					<th scope="col">Message</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="trigger in triggerList.triggers">
+						<td><input type="checkbox" ng-model="trigger.seletected"></td>
+						<td>{{trigger.logMessage}}</td>
+						<td>{{trigger.message}}</td>
+					</tr>
+				</tbody>
+	  		</table>
+	  		<a class="btn btn-danger" href="" role="button" ng-click="triggerList.deleteSeletected()">Delete</a>
+	  		
+		</div>
+		<div class="container">
+
+				{"triggers": [<span ng-repeat="trigger in triggerList.triggers">{"logMessage":"{{trigger.logMessage}}","message":"{{trigger.message}}"}<span ng-if="!$last">,</span></span>]}
+
+		</div>
+
+	</body>
+
+	</html>

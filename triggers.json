@@ -1,0 +1,12 @@
+{
+	"triggers": [
+		{
+			"logMessage":"Trick Attack",
+			"message":"Trick used."
+		},
+		{
+			"logMessage":"Suiton.",
+			"message":"Suiton used."
+		}
+	]
+}
