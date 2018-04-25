@@ -15,7 +15,7 @@ angular.module('app').controller("ConfigController", function($http,$scope){
 			var blob = new Blob([configOptions.toJSON], { type:"application/json;charset=utf-8;" });			
 			var downloadLink = angular.element('<a></a>');
         		downloadLink.attr('href',window.URL.createObjectURL(blob));
-            	downloadLink.attr('download', 'fileName.json');
+            	downloadLink.attr('download', 'config.json');
 			downloadLink[0].click();
 
 	};
