@@ -1,0 +1,12 @@
+{
+	"triggers": [
+		{
+			"logMessage":"Example 1.",
+			"message":"Example 1"
+		},
+		{
+			"logMessage":"Example 2.",
+			"message":"Example 2"
+		}
+	]
+}
